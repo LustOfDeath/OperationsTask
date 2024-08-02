@@ -1,0 +1,5 @@
+1. run the CMD(Windows Key + R, then type "cmd") on your windows device
+2. run the following commands once you are in the project directory:
+    2.1. "python setup.py build bdist_wheel"
+    2.2. "python main.py"
+3. copy the server address and paste it to your browser
