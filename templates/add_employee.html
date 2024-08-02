@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+{% block content %}
+<h1>In order to enter new employee to the database, please fill the information bellow.</h1>
+<form action="{{ url_for('add_employee') }}" method="post">
+    <p>Name:</p>
+    <p><input type="text" name="name"/></p>
+    <p>Department:</p>
+    <p><input type="text" name="department"/></p>
+    <p>Workflow:</p>
+    <p><input type="text" name="workflow"/></p>
+    <p><input type="submit" value="Add" class="btn btn-success"/>
+    <a href="{{ url_for('check_database') }}" type="submit" class="btn btn-warning">Back</a></p>
+</form>
+{% endblock %}

@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{% block content %}
+<h1>You are editing information for employee: {{ employee.name }}</h1>
+<form action="{{ url_for('edit_employee', id=employee.id) }}" method="post">
+    <p><strong>ID:</strong> {{ employee.id }}</p>
+    <p>Name:</p>
+    <p><input type="text" name="name" value="{{ employee.name }}"/></p>
+    <p>Department:</p>
+    <p><input type="text" name="department" value="{{ employee.department }}"/></p>
+    <p>Workflow:</p>
+    <p><input type="text" name="workflow" value="{{ employee.workflow if employee.workflow is not none else '' }}"/></p>
+    <p><input type="submit" value="Edit" class="btn btn-info"/>
+    <a href="{{ url_for('get_employee', id=employee.id) }}" type="submit" class="btn btn-warning">Back</a></p>
+</form>
+{% endblock %}

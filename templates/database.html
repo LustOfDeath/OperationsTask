@@ -1,0 +1,9 @@
+{% extends "base.html" %}
+{% block content %}
+<h2>List of the employees</h2>
+{% for employee in all_employees %}
+<p><a href="{{ url_for('get_employee', id=employee.id) }}">{{employee.id}} {{employee.name}} {{employee.department}} {% if employee.workflow is not none
+    %}
+    {{employee.workflow}}</a> {% endif %}</p>
+{% endfor %}
+{% endblock %}
