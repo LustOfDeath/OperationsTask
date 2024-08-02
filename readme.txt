@@ -1,8 +1,3 @@
-packages list(everything was installed with pip):
-FLask: pip install flask
-Flask-SQLAlchemy: pip install Flask-SQLAlchemy
-
-
 How to run the application:
 
 1. Run the query.py in order to create a database with already filled information.
